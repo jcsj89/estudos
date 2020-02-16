@@ -5,6 +5,8 @@
  */
 package com.zeca.lotofacil;
 
+import org.json.simple.parser.ParseException;
+
 /**
  *
  * @author Junior
@@ -12,9 +14,13 @@ package com.zeca.lotofacil;
 public class Jogar {
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Volante volante1 = new Volante();
+        JSON jsonteste = new JSON();        
+        
+        volante1.cadastrarJogo( jsonteste.LerJSON("jogos.json") );
+        System.out.println(" ");
         volante1.imprimirJogo();
-        volante1.json();
+        //volante1.json();
     }
 }
