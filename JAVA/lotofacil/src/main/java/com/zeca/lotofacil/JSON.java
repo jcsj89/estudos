@@ -49,18 +49,7 @@ public class JSON {
                 jsonArray = null;
             }
             
-            // A JSON array. JSONObject supports java.util.List interface.
-            JSONArray jsonArray = (JSONArray) jsonObj.get("jogo0");
-            //JSONArray jsonArray = (JSONArray) jsonObj;
-            // An iterator over a collection. Iterator takes the place of Enumeration in the Java Collections Framework.
-            // Iterators differ from enumerations in two ways:
-            // 1. Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
-            // 2. Method names have been improved.
-            Iterator<JSONObject> iterator = jsonArray.iterator();
-            while (iterator.hasNext()) {
-                System.out.println(iterator.next());
-            }
-            System.out.println("Tamanho do objeto: " + jsonObj.size());
+            //System.out.println("Tamanho do objeto: " + jsonObj.size());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,8 +80,8 @@ public class JSON {
         }
 
         //Imprimne na Tela o Objeto JSON para vizualização
-        System.out.println("Método escreveJSON, conteudo escrito abaixo.");
-        System.out.println(jsonObject);
+        //System.out.println("Método escreveJSON, conteudo escrito abaixo.");
+        //System.out.println(jsonObject);
     }
 
 }

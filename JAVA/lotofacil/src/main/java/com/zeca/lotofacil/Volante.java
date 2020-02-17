@@ -10,18 +10,18 @@ package com.zeca.lotofacil;
  * @author Junior
  */
 public class Volante {
-
+    
     private int[][] jogos = null;
 
     public Volante() {//quantidade de jogos para criar
         //jogos = new int[qtd][15];
     }//construtor
 
-    public void cadastrarJogo(int[][] jogos) {
+    public void cadastrarJogo(int[][] jogos) {//recebe os jogos para manipulação
         this.jogos = jogos;
     }
 
-    public void imprimirJogo() {
+    public void imprimirJogo() {//imprime os jogos cadastrados
         if (jogos.length > 0) {
             for (int i = 0; i < jogos.length; i++) {
                 System.out.println("jogo"+i);
@@ -32,4 +32,9 @@ public class Volante {
             }
         }
     }
+
+    public int[][] getJogos() {
+        return jogos;
+    }      
+    
 }//classe
