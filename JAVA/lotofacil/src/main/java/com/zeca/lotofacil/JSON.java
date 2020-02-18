@@ -8,11 +8,11 @@ package com.zeca.lotofacil;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.FileReader;
-import java.util.Iterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
 /**
  *
  * @author Junior
@@ -38,17 +38,15 @@ public class JSON {
             // A JSON object. Key value pairs are unordered. JSONObject supports java.util.Map interface.
             JSONObject jsonObj = (JSONObject) obj;
             jogos = new int[jsonObj.size()][15];
-            
 
             for (int i = 0; i < jsonObj.size(); i++) {
                 jsonArray = (JSONArray) jsonObj.get("jogo" + i);
-                
                 for (int j = 0; j < jsonArray.size(); j++) {
-                    jogos[i][j] = Integer.parseInt(jsonArray.get(j).toString());                    
+                    jogos[i][j] = Integer.parseInt(jsonArray.get(j).toString());
                 }
                 jsonArray = null;
             }
-            
+
             //System.out.println("Tamanho do objeto: " + jsonObj.size());
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,7 +56,7 @@ public class JSON {
 
     //Escreve um arquivo .json com os jogos recebidos pelo array como parametro
     //array multidimensional para varios jogos
-    public void escreveJSON(int[][] jogos) {
+    public void escreveJSON(Integer[][] jogos) {
         //Cria um Objeto JSON        
 
         for (int i = 0; i < jogos.length; i++) {

@@ -24,11 +24,11 @@ public class Volante {
     public void imprimirJogo() {//imprime os jogos cadastrados
         if (jogos.length > 0) {
             for (int i = 0; i < jogos.length; i++) {
-                System.out.println("jogo"+i);
+                System.out.printf("Jogo %d [",i);
                 for (int j = 0; j < jogos[i].length; j++) {
-                    System.out.println(jogos[i][j]);
+                    System.out.printf("%d  ",jogos[i][j]);
                 }
-                System.out.println(" ");
+                System.out.printf("]\n");
             }
         }
     }
