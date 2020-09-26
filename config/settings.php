@@ -1,11 +1,11 @@
 <?php
 
 // Error reporting for production
-error_reporting(0);
-ini_set('display_errors', '0');
+error_reporting(1);
+ini_set('display_errors', '1');
 
 // Timezone
-date_default_timezone_set('Europe/Berlin');
+date_default_timezone_set('America/Sao_Paulo');
 
 // Settings
 $settings = [];
@@ -30,4 +30,40 @@ $settings['error'] = [
     'log_error_details' => true,
 ];
 
+// Database settings
+$settings['db'] = [
+    'driver' => 'mysql',
+    'host' => '192.168.0.200',
+    'username' => 'jose',
+    'database' => 'teste',
+    'password' => '0323',
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_unicode_ci',
+    'flags' => [
+        // Turn off persistent connections
+        PDO::ATTR_PERSISTENT => false,
+        // Enable exceptions
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        // Emulate prepared statements
+        PDO::ATTR_EMULATE_PREPARES => true,
+        // Set default fetch mode to array
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        // Set character set
+        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci'
+    ],
+];
+
+// Twig settings
+$settings['twig'] = [
+    // Template paths
+    'paths' => [
+        __DIR__ . '/../templates',
+    ],
+    // Twig environment options
+    'options' => [
+        // Should be set to true in production
+        'cache_enabled' => false,
+        'cache_path' => __DIR__ . '/../tmp/twig',
+    ],
+];
 return $settings;

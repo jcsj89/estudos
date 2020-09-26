@@ -5,12 +5,10 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\App;
 
 return function (App $app) {
-    $app->get('/', function (
-        ServerRequestInterface $request,
-        ResponseInterface $response
-    ) {
-        $response->getBody()->write('Hello, World!');
+    $app->get('/', \App\Action\HomeAction::class)->setName('home');
+    $app->get('/hello', \App\Action\HelloAction::class);
+    $app->post('/users', \App\Action\UserCreateAction::class);
+    $app->post('/username', '\App\Action\UserCreateAction:buscaNome');
 
-        return $response;
-    });
+    $app->get('/user', '\App\Action\UserCreateAction:teste');
 };
