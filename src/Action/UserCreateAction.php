@@ -45,7 +45,7 @@ final class UserCreateAction
                     "email" => "teste" ];     
 
         // Build the HTTP response
-        $response->getBody()->write((string)json_encode($data2));
+        $response->getBody()->write( (string) json_encode($data2) );
 
         return $response
             ->withHeader('Content-Type', 'application/json')
@@ -66,7 +66,7 @@ final class UserCreateAction
         ];
 
         // Build the HTTP response
-        $response->getBody()->write((string)json_encode($result));
+        $response->getBody()->write( (string)json_encode($result) );
 
         return $response
             ->withHeader('Content-Type', 'application/json')

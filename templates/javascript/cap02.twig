@@ -1,0 +1,26 @@
+{% extends 'base/base.twig' %}
+{% block content %}
+	<h2>Variáveis</h2>
+	<div class="row">
+		<div class="col">
+			<h5>Variavel Numerica <span id="cost"></span></h5>			
+		</div>
+		<div class="col">
+			<h5>Variavel String </h5>	
+			<h6>Name: <span id="name"></span></h6>
+			<h6>Message: <span id="note"></span> </h6>		
+		</div>
+		<div class="col">
+			<h5>Array Literal </h5>	
+			<h6>Colors: <span id="colors"></span></h6>
+					
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="/js/javascript/cap02/numeric-variable.js">
+	</script>
+	<script type="text/javascript" src="/js/javascript/cap02/string-variable.js">
+	</script>
+	<script type="text/javascript" src="/js/javascript/cap02/array-literal.js">
+	</script>
+{% endblock %}

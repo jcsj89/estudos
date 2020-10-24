@@ -25,16 +25,9 @@ final class UserCreator
         $this->repository = $repository;
     }
 
-    /**
-     * Create a new user.
-     *
-     * @param array $data The form data
-     *
-     * @return int The new user ID
-     */
+    
     public function createUser( array $data ): int
-    {
-        // Input validation
+    {        
         //$this->validateNewUser($data);
 
         // Insert user
@@ -60,15 +53,7 @@ final class UserCreator
         return $username; 
     }
 
-    /**
-     * Input validation.
-     *
-     * @param array $data The form data
-     *
-     * @throws ValidationException
-     *
-     * @return void
-     */
+    
     private function validateNewUser(array $data): void
     {
         $errors = [];
@@ -85,7 +70,7 @@ final class UserCreator
             $errors['email'] = 'Invalid email address';
         }
 
-        if ($errors) {
+        if ( $errors ) {
             throw new ValidationException('Please check your input', $errors);
         }
     }

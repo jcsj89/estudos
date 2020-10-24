@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\User\Data;
+namespace App\Domain\JavaScript;
 
-final class UserData
+final class Cap01
 {
     
     public $id;

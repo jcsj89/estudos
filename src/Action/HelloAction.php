@@ -28,4 +28,19 @@ final class HelloAction
         
         return $this->twig->render($response, 'hello.twig', $viewData);
     }
+
+    public function sessao(
+        ServerRequestInterface $request,
+        ResponseInterface $response
+    ): ResponseInterface {
+        
+        $viewData = [
+            'session' => $_SESSION,
+            'session2' => var_dump($_SESSION),
+            'sessionid' => session_id()
+
+        ];
+        
+        return $this->twig->render($response, 'hello.twig', $viewData);
+    }
 }
