@@ -3,12 +3,13 @@
 
 **Exemplos de estudos**
 
-*  Git
-*  Ubuntu
-*  PHP
-*  Slim
+*   Git
+*   Ubuntu
+*   PHP
+*   Slim
+*   Javascript
+*   Node
 
 
 [Me mande um email](mailto:jcsj2010@gmail.com)
 [Site](http://www.acrsystem.com.br)
-

@@ -1,7 +1,0 @@
-Action-------------
-A ação faz apenas estas coisas:
-
-Coleta informações da solicitação HTTP (se necessário)
-Invoca o domínio com essas entradas (se necessário) e retém o resultado
-Cria uma resposta HTTP (normalmente com os resultados da invocação do Domínio).
-
