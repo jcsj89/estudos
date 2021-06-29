@@ -1,0 +1,2 @@
+(()=>{"use strict";console.log("jose","santana",31),console.log(8);var e=new function e(n){var o,a;!function(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}(this,e),a=void 0,(o="nome")in this?Object.defineProperty(this,o,{value:a,enumerable:!0,configurable:!0,writable:!0}):this.nome=a,this.idade=n}("31");e.nome="Ze",console.log(e)})();
+//# sourceMappingURL=bundle.js.map
