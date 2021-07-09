@@ -5,9 +5,9 @@
 let name = "Jose";
 let lastName = "santana";
 let year = 31;
-const numClient = 1233123;
+const numClient = 3;
 
-console.log('boa tarde ' + name + lastName + year + numClient);
+console.log('boa tarde ' + ' ' +name+ ' ' + ' '+ lastName + ' ' + ' '+ year + " " + numClient);
 
 //operadores aritimeticos
 let soma = 0;
@@ -17,7 +17,7 @@ let mod = 34 % 2;
 let prod = 34 * 45;
 let expo = 4**6;
 
-console.log('soma: '  + ++soma);
+console.log('soma: '  + (soma+12));
 console.log('sub: ' + sub++);
 console.log('div: '+div);
 console.log('mod: '+mod);
@@ -28,7 +28,7 @@ console.log('expo: '+expo);
 // < > <= =>
 // 
 
-console.log('&&'+ soma || sub);
+console.log('&&'+ parseInt(soma) || sub);
 
 if (10 > 11) {
     console.log('if');
